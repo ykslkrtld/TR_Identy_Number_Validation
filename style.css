@@ -1,0 +1,40 @@
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 80%;
+    height: 300px;
+    margin: 10rem auto;
+    background-color: rgba(30, 132, 210, 0.721);
+    border-radius: 2rem;
+}
+
+h1{
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.input{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem;
+}
+
+input{
+    width: 12rem;
+    height: 2rem;
+}
+
+button{
+    padding: 0 1rem;
+}
+
+p{
+    text-align: center;
+}
