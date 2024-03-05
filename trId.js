@@ -49,11 +49,3 @@ input.addEventListener("keydown", (e) => {
         button.click()
     }
 })
-
-
-
-
-
-// for(let i in idNum){
-//     i % 2 ? sumEven += Number(idNum[i]) : sumOdd += Number(idNum[i])
-// }
