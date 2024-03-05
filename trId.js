@@ -14,8 +14,8 @@ button.addEventListener("click", () => {
     let sumEven = 0
     let sumFirstTen = 0
 
-    for(let i = 0; i < 9; i++){
-        i % 2 === 0 ? sumOdd += Number(idNum[i]) : sumEven += Number(idNum[i])
+    for(let i = 1; i < 10; i++){
+        i % 2 ? sumOdd += Number(idNum[i-1]) : sumEven += Number(idNum[i-1])
     }
     
     let numTen = (sumOdd * 7 - sumEven) % 10
