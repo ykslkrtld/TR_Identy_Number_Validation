@@ -18,20 +18,18 @@ button.addEventListener("click", () => {
         i % 2 === 0 ? sumOdd += Number(idNum[i]) : sumEven += Number(idNum[i])
     }
     
-    let numTen = (sumOdd * 7 - sumEven).toString()
+    let numTen = (sumOdd * 7 - sumEven) % 10
 
     for(let i = 0; i < 10; i++){
         sumFirstTen += Number(idNum[i])
     }
-    console.log(sumFirstTen);
 
-
-    let numEleven = sumFirstTen.toString()
+    let numEleven = sumFirstTen % 10
   
     if(idNum.length !== 11 ||
         idNum[0] === 0 ||
-        idNum[9] !== numTen[numTen.length - 1] ||
-        idNum[10] !== numEleven[numEleven.length - 1]){result.textContent = "Yanlış TC Kimlik Numarası girdiniz. tekrar deneyiniz"
+        idNum[9] != numTen ||
+        idNum[10] != numEleven){result.textContent = "Yanlış TC Kimlik Numarası girdiniz. tekrar deneyiniz"
         result.style.color = "red" 
     } else{
         result.textContent = `Girilen TC Kimlik No (${input.value}) geçerlidir`
@@ -43,7 +41,7 @@ button.addEventListener("click", () => {
         input.value = "";
         result.textContent = "";
         result.visibility = "hidden";
-    }, 4000);
+    }, 2500);
 })
 
 input.addEventListener("keydown", (e) => {
